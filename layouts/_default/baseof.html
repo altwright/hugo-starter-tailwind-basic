@@ -6,9 +6,8 @@
       {{ .Title }}
     </title>
     <meta name="description" content="{{ .Description }}" />
-    {{ with (templates.Defer (dict "key" "styles" "data" "foo")) }}
-      {{ warnf "deferred: %s" . }}
-      {{ $options := dict "inlineImports" true }}
+    {{ with (templates.Defer (dict "key" "styles" )) }}
+      {{ $options := dict "inlineImports" false }}
       {{ $styles := resources.Get "css/styles.css" }}
       {{ $styles = $styles | resources.PostCSS $options }}
       {{ if hugo.IsProduction }}
@@ -16,7 +15,6 @@
       {{ end }}
       <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
     {{ end }}
-
   </head>
   <body class="my-10">
     <div class="container px-4 lg:mx-auto">

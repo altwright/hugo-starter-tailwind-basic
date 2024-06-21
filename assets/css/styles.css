@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@import "components/all.css";
+/*@import "components/all.css"; TODO1 */
 
 html {
   font-size: 14px;
