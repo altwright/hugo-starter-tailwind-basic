@@ -25,8 +25,6 @@ func New(numWorkers int) *Workers {
 }
 ```
 
-
-
 ## Block Elements
 
 ### Paragraphs and Line Breaks

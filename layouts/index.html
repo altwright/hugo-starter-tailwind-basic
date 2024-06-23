@@ -1,13 +1,9 @@
 {{ define "main" }}
-  <article class="prose lg:prose-xl mx-auto w-8/12">
-    <h1>Tailwind 4 Hugo Starter</h1>
+  <article class="mx-auto max-w-[90ch]">
+    <h1 class="text-6xl mb-8 text-center">Tailwind 4 Hugo Starter</h1>
 
-    <h2 class="text-4xl">Testing Tailwind 4 Features</h2>
-    <div>
-      <button class="bg-[pink] p-4">Share on Twitter!</button>
+    <div class="markdown p-4 bg-slate-50">
+      {{ .Content }}
     </div>
-
-    <h2 class="text-4xl">Markdowns: {{ .Title }}</h2>
-    {{ .Content }}..
   </article>
 {{ end }}
