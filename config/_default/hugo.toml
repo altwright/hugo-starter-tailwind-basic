@@ -1,10 +1,30 @@
-baseURL = "https://example.org"
+baseURL = "https://altwright.com"
+languageCode = 'en-us'
+title = 'Benjamin Daniel Wright'
+
+enableGitInfo = true
+enableRobotsTXT = true
 
 disableKinds = ["page", "section", "taxonomy", "term"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = []
+          inline = []
+
 [module]
   [module.hugoVersion]
-    extended = false
+    extended = true
     min      = "0.112.0"
   [[module.mounts]]
     source = "assets"
